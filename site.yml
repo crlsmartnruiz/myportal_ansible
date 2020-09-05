@@ -1,0 +1,14 @@
+---
+  - hosts: localhost
+    connection: local 
+    become: yes
+    gather_facts: true
+    vars:
+     myportal_path: "/myportal"
+     mysql:
+       db: wordpress
+    roles:
+      - role: packages
+        tags: packages
+      - role: myportal
+        tags: myportal

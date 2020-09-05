@@ -1,0 +1,7 @@
+---
+
+- name: Docker Compose UP
+  docker_compose:
+    project_src: "{{ myportal_path }}"
+    pull: yes
+    state: present

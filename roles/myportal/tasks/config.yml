@@ -1,0 +1,9 @@
+- name: Create app dir
+  file:
+    path: "{{ myportal_path }}"
+    state: directory
+
+- name: Copy docker-compose
+  template:
+   src: ../templates/docker-compose.yml.j2 
+   dest: "{{ myportal_path }}/docker-compose.yml"
