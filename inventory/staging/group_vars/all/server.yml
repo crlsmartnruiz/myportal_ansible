@@ -1,3 +1,5 @@
 ---
 
 myportal_path: "/myportal"
+mysql:
+  db: wordpress

@@ -3,10 +3,8 @@
     connection: local 
     become: yes
     gather_facts: true
-    vars:
-     myportal_path: "/myportal"
-     mysql:
-       db: wordpress
+    vars_files:
+    - ~/myportal_ansible/inventory/staging/group_vars/all/server.yml
     roles:
       - role: packages
         tags: packages
